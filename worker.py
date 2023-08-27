@@ -32,7 +32,7 @@ async def check_payments(MAIN_GUILD):
                 'user_id': user_id,
                 'role_id': role_id,
                 'role_name': role_name,
-                'end_time': datetime.now() - timedelta(days=30)
+                'end_time': datetime.now() + timedelta(days=30)
             }
             logger.info(succeeded_transaction)
             idempotence_key = str(uuid.uuid4())
